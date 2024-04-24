@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tejas-service-1
+spec:
+  selector:
+    app: tejas-app
+  ports:
+    - name: container-1
+      protocol: TCP
+      port: 6000
+      targetPort: 6000
+  type: LoadBalancer
